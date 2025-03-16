@@ -59,14 +59,12 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 20),
             Consumer<RegisterProvider>(
               builder: (context, value, child) {
-                return value.isLoading
-                    ? const CircularProgressIndicator()
-                    : ElevatedButton(
+                return  ElevatedButton(
                         onPressed: () async {
                           if (formKey.currentState!.validate()) {
                             await value.logUser(
-                              email: emailController.text,
-                              password: passwordController.text,
+                              email: emailController.value as String,
+                              password: passwordController.value as String,
                             );
 
                           }

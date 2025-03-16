@@ -4,6 +4,6 @@ class UserData {
   UserData({required this.user});
 
   factory UserData.fetchUser(Map<String, dynamic> json) {
-    return UserData(user: json["data"]);
+    return UserData(user: json["user"]);
   }
 }

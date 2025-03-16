@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:shop_app_api/models/user_model.dart';
 
 class RegisterService {
-  static Dio dio = Dio();
+  static Dio dio = Dio(); 
   static Future<UserData> registerService({
     required String name,
     required String email,

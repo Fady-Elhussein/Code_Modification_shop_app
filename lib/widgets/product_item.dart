@@ -26,12 +26,7 @@ class ProductItem extends StatelessWidget {
                 image,
               ),
             ),
-            const SizedBox(height: 10),
-            Text(
-              name,
-              maxLines: 1,
-               style: TextStyle(fontWeight: FontWeight.w900),
-            ),
+
             const SizedBox(height: 5),
             Text(
               "$price LE",

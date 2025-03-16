@@ -69,16 +69,15 @@ class SignUp extends StatelessWidget {
                 width: 150,
                 child: Consumer<RegisterProvider>(
                   builder: (context, value, child) {
-                    return value.isLoading
-                        ? const CircularProgressIndicator()
-                        : ElevatedButton(
+                    return
+                         ElevatedButton(
                             onPressed: () async {
                               if (formKey.currentState!.validate()) {
                                 await value.registerUser(
-                                  email: emailController.text,
-                                  password: passwordController.text,
-                                  name: nameController.text,
-                                  phone: phoneController.text,
+                                  email: emailController.value as String,
+                                  password: passwordController.value as String,
+                                  name: nameController.value as String,
+                                  phone: phoneController.value as String,
                                 );
                                 if (value.userModel != null) {
                                   Navigator.push(

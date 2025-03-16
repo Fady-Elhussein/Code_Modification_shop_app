@@ -38,21 +38,21 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => ProductDetailsPage(
-                        image: productsModel.products[index]["image"],
-                        name: productsModel.products[index]["name"],
+                        image: productsModel.products[index]["picture"],
+                        name: productsModel.products[index]["UserName"],
                         description: productsModel.products[index]
-                            ["description"],
+                            ["descriptions"],
                       ),
                     ),
                   );
                 },
                 child: ProductItem(
-                  image: productsModel.products[index]["image"],
-                  name: productsModel.products[index]["name"],
-                  price: productsModel.products[index]["price"],
+                  image: productsModel.products[index]["picture"],
+                  name: productsModel.products[index]["UserName"],
+                  price: productsModel.products[index]["prices"],
                 ),
               ),
-              itemCount: productsModel.products.length,
+              itemCount: 20,
             );
           }
         },

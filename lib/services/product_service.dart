@@ -13,7 +13,6 @@ class ProductsService{
     Response response= await dio.get("https://student.valuxapps.com/api/products");
     try{
       if (response.statusCode==200){
-        print(response.data);
         return ProductsModel.fromJson(response.data);
       }else{
         throw Exception("Code not 200");

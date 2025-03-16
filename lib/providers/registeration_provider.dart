@@ -4,7 +4,6 @@ import 'package:shop_app_api/services/regestration_service.dart';
 
 class RegisterProvider extends ChangeNotifier {
   UserData? userModel;
-  bool isLoading = false;
 
   Future<void> registerUser({
     required String name,
@@ -12,7 +11,6 @@ class RegisterProvider extends ChangeNotifier {
     required String phone,
     required String password,
   }) async {
-    isLoading = true;
 
     userModel = await RegisterService.registerService(
       name: name,
@@ -21,20 +19,17 @@ class RegisterProvider extends ChangeNotifier {
       password: password,
     );
 
-    isLoading = false;
   }
 
   Future<void> logUser({
     required String email,
     required String password,
   }) async {
-    isLoading = true;
 
     userModel = await RegisterService.logService(
       email: email,
       password: password,
     );
 
-    isLoading = false;
   }
 }

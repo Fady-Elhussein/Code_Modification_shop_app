@@ -5,6 +5,6 @@ class ProductsModel {
 
   factory ProductsModel.fromJson(Map<String,dynamic> json){
 
-    return ProductsModel(products: json["data"]["data"]);
+    return ProductsModel(products: json["data"]);
   }
 }
